@@ -1,6 +1,12 @@
 require_relative 'api'
 
-class RSpec::Core::Formatters::ProgressFormatter
+class LightFormatter
+  RSpec::Core::Formatters.register self, :start, :example_failed, :close
+
+  def initialize(output)
+    @output = output
+  end
+
   def start(_notification)
     set(:started)
   end
