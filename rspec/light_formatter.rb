@@ -24,6 +24,6 @@ class LightFormatter
   end
 
   def api
-    @api ||= API.new
+    @api ||= API.instance
   end
 end

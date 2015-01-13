@@ -1,7 +1,10 @@
 require 'uri'
 require 'net/http'
+require 'singleton'
 
 class API
+  include Singleton
+
   attr_accessor :status
 
   def started
